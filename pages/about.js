@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import Heading from "../components/typography/heading";
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>ABOUT ME</h1>
+        {/* <h1 className={styles.title}>ABOUT ME</h1> */}
+
+        <Heading large>ABOUT ME</Heading>
 
         <h3>
           <Link href="/">
