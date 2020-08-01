@@ -6,15 +6,15 @@ import Heading from "../components/typography/heading";
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Head>
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
       <main className={styles.main}>
         {/* <h1 className={styles.title}>ABOUT ME</h1> */}
 
-        <Heading large>ABOUT ME</Heading>
+        <Heading>ABOUT ME</Heading>
 
         <h3>
           <Link href="/">
@@ -23,7 +23,7 @@ const Home = () => {
         </h3>
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -32,7 +32,7 @@ const Home = () => {
           Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };
