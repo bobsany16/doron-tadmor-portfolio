@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Heading from "../components/typography/heading";
+import GlobalWrapper from "../components/layout/globalWrapper";
+
 
 const Home = () => {
   return (
@@ -10,6 +12,13 @@ const Home = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
+
+
+      <GlobalWrapper>
+        <Heading>MORE</Heading>
+      </GlobalWrapper>
+
+
 
       <main className={styles.main}>
         {/* <h1 className={styles.title}>ABOUT ME</h1> */}

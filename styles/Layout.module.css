@@ -1,0 +1,11 @@
+.globalWrapper {
+    padding: 16px;
+    background-color: blueviolet;
+}
+
+.horizontalLine {
+    padding: 0;
+    width: 50%;
+    height: 1px;
+    border: 1px solid black;
+}

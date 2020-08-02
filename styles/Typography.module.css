@@ -2,13 +2,22 @@
   font-weight: bold;
   font-size: 5em;
 }
+.subheading {
+  font-size: 1.5em;
+}
 .text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 @media (min-width: 600px) {
   .heading {
     font-size: 10em;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .subheading {
+    font-size: 5em;
   }
 }

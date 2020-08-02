@@ -2,7 +2,9 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Heading from "../components/typography/heading";
 import Text from "../components/typography/text";
-
+import SubHeading from "../components/typography/subheading";
+import GlobalWrapper from "../components/layout/globalWrapper";
+import HorizontalLine from "../components/layout/horizontalLine";
 
 export default function Home() {
   return (
@@ -11,14 +13,17 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <GlobalWrapper>
+        <Heading>Hello,</Heading>
+        <SubHeading>A subheading</SubHeading>
+        <HorizontalLine />
+        <Text>What's Up</Text>
+      </GlobalWrapper>
 
       <main className={styles.main}>
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
-
-        <Heading>Hello,</Heading>
-        <Text>What's Up</Text>
 
         {/* <p className={styles.description}>
           Get started by editing{" "}
