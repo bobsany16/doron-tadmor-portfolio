@@ -1,0 +1,31 @@
+.buttonWrapper {
+    width: 100%;
+    padding-bottom: 18px;
+}
+
+.buttonComponent_blue {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 18px;
+    padding-left: 18px;
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+}
+.buttonComponent_black {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 18px;
+    padding-left: 18px;
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+
+.buttonComponent:hover {
+    background-color: black;
+}
