@@ -1,13 +1,25 @@
-.heading {
+.heading_h1 {
   font-weight: bold;
   font-size: 5em;
+  margin: 0;
+}
+.heading_span {
+  padding: 0;
+}
+.heading_h2 {
+  font-weight: bold;
+  font-size: 4em;
+}
+.heading_h3 {
+  font-weight: normal;
+  font-size: 3em;
 }
 .subheading {
   font-size: 1.5em;
 }
 .text {
   font-size: 12px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {

@@ -1,6 +1,42 @@
-.globalWrapper {
+.globalWrapper_last_child {
     padding: 16px;
+    margin-top: 0;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 0;
     background-color: blueviolet;
+    
+}
+.globalWrapper_last_child_no_padding {
+    padding: 16px;
+    margin: 0;
+    background-color: blueviolet;
+    
+}
+
+.globalWrapper_first_child {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    /* padding-top: 8px; */
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 40px;
+    /* margin-top: 8px; */
+    background-color: blue;
+}
+.globalWrapper_first_child_no_padding {
+    padding: 16px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 16px;
+    margin-top: 0;
+    background-color: blue;
+}
+
+.globalWrapper_no_padding {
+    margin: 0px;
+    background-color: yellow;
 }
 
 .horizontalLine {

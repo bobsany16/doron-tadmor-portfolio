@@ -10,17 +10,37 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Doron Tadmor</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GlobalWrapper>
+
+      <div className={styles.navContainer}>
+        NavBar
+      </div>
+
+      <GlobalWrapper noPadding className={styles.mainBackground}>
+      <GlobalWrapper firstChild >
         <Heading>Hello,</Heading>
         <SubHeading>A subheading</SubHeading>
         <HorizontalLine />
         <Text>What's Up</Text>
       </GlobalWrapper>
 
-      <main className={styles.main}>
+      </GlobalWrapper>
+
+ 
+      
+
+      {/* <HorizontalLine /> */}
+      
+      {/* <GlobalWrapper lastChild noPadding>
+        <Heading>Hello,</Heading>
+        <SubHeading>A subheading</SubHeading>
+        <HorizontalLine />
+        <Text>What's Up</Text>
+      </GlobalWrapper> */}
+
+     
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
@@ -59,7 +79,7 @@ export default function Home() {
             </p>
           </a>
         </div> */}
-      </main>
+     
     </div>
   );
 }
