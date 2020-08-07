@@ -1,82 +1,27 @@
-import styled from "styled-components";
+import styles from "/Users/linhanhnguyen/Documents/GitHub/freelance/doron-tadmor/styles/Typography.module.css";
 import PropTypes from "prop-types";
 
 const propTypes = {
-    textColor: PropTypes.string,
+  type: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
+  isBold: PropTypes.bool,
+  isItalics: PropTypes.bool,
 
-    type: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h6", "span", "p"]),
-
-    smallest: PropTypes.bool,
-    small: PropTypes.bool,
-    medium: PropTypes.bool,
-    large: PropTypes.bool,
-    larger: PropTypes.bool,
-    largest: PropTypes.bool,
-  },
-  defaultProps = {
-    type: "h1",
-    textColor: "#000000",
-  };
-
-const fontSettings = {
-  fontWeight: "bold",
-
-  smallest: { fontSize: 14, lineHeight: 14 },
-  small: { fontSize: 16, lineHeight: 16 },
-  medium: { fontSize: 18, lineHeight: 18 },
-  large: { fontSize: 20, lineHeight: 20 },
-  larger: { fontSize: 28, lineHeight: 28 },
-  largest: { fontSize: 32, lineHeight: 32 },
-};
-
-const HeadingComponent = styled.span`
-  font-weight: ${fontSettings.fontWeight};
-  color: ${({ color }) => color};
-  font-size: ${({fontSize}) => fontSize}px;
-`;
-
-const Heading = ({
-  smallest,
-  small,
-  medium,
-  large,
-  larger,
-  largest,
-  textColor,
-  type,
-  children,
-  ...rest
-}) => {
-  if (!smallest && !small && !medium && !large && !larger && !largest) {
-    small = true;
-  }
-
-  let sizeSetting = {};
-
-  if (smallest) {
-    sizeSetting = fontSettings.smallest;
-  } else if (small) {
-    sizeSetting = fontSettings.small;
-  } else if (medium) {
-    sizeSetting = fontSettings.medium;
-  } else if (large) {
-    sizeSetting = fontSettings.large;
-  } else if (larger) {
-    sizeSetting = fontSettings.larger;
-  } else {
-    sizeSetting = fontSettings.largest;
-  }
-
+}, defaultProps = {
+  type: "h1",
+  isBold: true,
+  isItalics: false,
+}
+const Heading = ({ type, isBold, isItalics, children }) => {
   return (
-    <HeadingComponent
-      color={textColor}
-      type={type}
-      fontSize={sizeSetting.fontSize}
-      lineHeight={sizeSetting.lineHeight}
-      {...rest}
-    >
-      {children}
-    </HeadingComponent>
+    <span className={styles.heading_span}>
+      {(type === "h1") && <h1 className={styles.heading_h1}>{children}</h1>}
+      {(type === "h2") && <h2 className={styles.heading_h2}>{children}</h2>}
+      {(type === "h3") && <h3 className={styles.heading_h3}>{children}</h3>}
+      {(type === "h4") && <h4 className={styles.heading_h4}>{children}</h4>}
+      {(type === "h5") && <h4 className={styles.heading_h5}>{children}</h4>}
+      {(type === "h6") && <h5 className={styles.heading_h6}>{children}</h5>}
+      
+    </span>
   );
 };
 

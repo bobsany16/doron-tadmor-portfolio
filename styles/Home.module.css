@@ -1,10 +1,22 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: #e6dacd;
+}
+
+.buttonSection {
+  width: 100%;
+  text-align: center;
+  /* background-color: #0070f3; */
+}
+
+.mainBackground {
+  background-color: black;
 }
 
 .main {
@@ -115,9 +127,8 @@
   height: 1em;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (min-width: 600px) {
+  .container {
+    align-items: center;
   }
 }
