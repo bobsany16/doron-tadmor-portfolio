@@ -62,7 +62,7 @@ a {
 
 /* General sidebar styles */
 .bm-menu {
-  background: white;
+  background: #e6dacd;;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   height: 100%;
@@ -90,7 +90,7 @@ a {
 }
 
 .bm-menu-wrap {
-  top: 72px;
+  top: 90px;
   /* left: 0px; */
   right: 0px;
   width: 100vw !important;

@@ -7,18 +7,11 @@ import GlobalWrapper from "../components/layout/globalWrapper";
 import HorizontalLine from "../components/layout/horizontalLine";
 import NavBar from "../components/navigation/navBar";
 import ButtonPrimary from "../components/buttons/primary";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Doron Tadmor</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <NavBar />
-
-      {/* <GlobalWrapper noPadding> */}
+    <Layout>
       <GlobalWrapper firstChild noPadding>
         <br />
         <Heading type="h2">Welcome!</Heading>
@@ -46,6 +39,6 @@ export default function Home() {
           <ButtonPrimary color="black">VIEW MY PROJECTS</ButtonPrimary>
         </div>
       </GlobalWrapper>
-    </div>
+    </Layout>
   );
 }
