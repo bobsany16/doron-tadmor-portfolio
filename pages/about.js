@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Heading from "../components/typography/heading";
 import GlobalWrapper from "../components/layout/globalWrapper";
 import Layout from "../components/layout";
+import Icon from "../components/icons/icon";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         {/* <h1 className={styles.title}>ABOUT ME</h1> */}
 
         <Heading>ABOUT ME</Heading>
+        <Icon />
 
         <h3>
           <Link href="/">
