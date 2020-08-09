@@ -1,4 +1,5 @@
 import styles from "/Users/linhanhnguyen/Documents/GitHub/freelance/doron-tadmor/styles/Navigation.module.css";
+import Link from "next/link";
 import Heading from "../typography/heading";
 import Text from "../typography/text";
 import Burger from "../navigation/burger";
@@ -10,7 +11,12 @@ const Footer = ({ children, props }) => {
         <Text>Copyright @2020</Text>
       </div>
       <div className={styles.creatorWrapper}>
-        <Text>Created by Linh Nguyen</Text>
+        <Text>
+          Created by{" "}
+          <a href="https://linhnguyen.dev">
+            <u>Linh Nguyen</u>
+          </a>
+        </Text>
       </div>
     </div>
   );

@@ -11,11 +11,10 @@ const handleChange = () => {
 }
   return (
     <Menu isOpen={open} right noOverlay {...props}>
-      <Anchor href="/about" title="ABOUT" headingType="h3" />
-      <Anchor href="/" title="RESUMÉ" headingType="h3" />
-      <Anchor href="/" title="PROJECTS" headingType="h3" />
-      <Anchor href="/" title="GLOBAL SCALE" headingType="h3" />
-      <Anchor href="/" title="CONTACT" headingType="h3" />
+      <Anchor href="/resume" title="RESUMÉ" headingType="h3" onClick={handleChange}/>
+      <Anchor href="/" title="PROJECTS" headingType="h3" onClick={handleChange}/>
+      <Anchor href="/" title="GLOBAL SCALE" headingType="h3" onClick={handleChange}/>
+      <Anchor href="/" title="CONTACT" headingType="h3" onClick={handleChange}/>
     </Menu>
   );
 };

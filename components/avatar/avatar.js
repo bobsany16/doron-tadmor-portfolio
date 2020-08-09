@@ -5,7 +5,6 @@ import styles from "/Users/linhanhnguyen/Documents/GitHub/freelance/doron-tadmor
 
 const propTypes = {
     uri: PropTypes.string,
-    // size: PropTypes.string,
   },
   defaultProps = {
     uri: "",
@@ -15,9 +14,8 @@ const propTypes = {
 const MainAvatar = ({ size, uri }) => {
   return (
     <div className={styles.avatarWrapper}>
-      {/* <Avatar alt="Doron's pic" src={uri} size={size}/> */}
-      <img src={uri} alt="profile picture" className={styles.avatar}/>
-      </div>
+      <img src={uri} alt="profile picture" className={styles.avatar} />
+    </div>
   );
 };
 

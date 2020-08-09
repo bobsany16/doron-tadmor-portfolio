@@ -1,0 +1,16 @@
+.blockWrapper, .threeBlockWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* text-align: center; */
+    justify-content: space-between;
+    /* align-self: center; */
+    /* background-color: brown;
+    align-items: center; */
+}
+
+.threeBlockWrapper {
+    /* background-color: aquamarine; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
