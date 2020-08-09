@@ -1,0 +1,13 @@
+.avatarWrapper {
+    padding: 16px;
+    margin-bottom: 16px; 
+    text-align: center;
+    
+} 
+
+.avatar {
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+
+}

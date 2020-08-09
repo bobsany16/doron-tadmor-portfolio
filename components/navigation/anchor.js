@@ -17,8 +17,10 @@ const propTypes = {
 const Anchor = ({ href, title, headingType }) => {
   return (
     <Heading type={headingType}>
-      <Link  href={href}>
-        <a className={styles.nav_menu_item}>{title}</a>
+      <Link href={href}>
+        <a className={styles.nav_menu_item}>
+          <b>{title}</b>
+        </a>
       </Link>
     </Heading>
   );

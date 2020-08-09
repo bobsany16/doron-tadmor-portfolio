@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { slide as Menu } from "react-burger-menu";
 import Anchor from "../navigation/anchor";
 
-const Burger = ({ chilren, props }) => {
+const Burger = ({ children, props }) => {
 
 const [open, setOpen] = useState(false);
 
