@@ -10,6 +10,7 @@
   "dependencies": {
     "next": "9.5.0",
     "react": "16.13.1",
+    "react-avatar": "^3.9.7",
     "react-burger-menu": "^2.7.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.1"

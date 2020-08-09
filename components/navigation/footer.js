@@ -3,18 +3,17 @@ import Heading from "../typography/heading";
 import Text from "../typography/text";
 import Burger from "../navigation/burger";
 
-const NavBar = ({ children, props }) => {
+const Footer = ({ children, props }) => {
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.footerWrapper}>
       <div className={styles.navTitleWrapper}>
-        <Heading type="h5"><b>Doron Tadmor</b></Heading>
-        <Text>STRATEGIST</Text>
+        <Text>Copyright @2020</Text>
       </div>
-      <div className={styles.menu}>
-        <Burger />
+      <div className={styles.creatorWrapper}>
+        <Text>Created by Linh Nguyen</Text>
       </div>
     </div>
   );
 };
 
-export default NavBar;
+export default Footer;
