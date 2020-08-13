@@ -1,0 +1,90 @@
+import styles from "/Users/linhanhnguyen/Documents/GitHub/freelance/doron-tadmor/styles/Cards.module.css";
+import Heading from "../typography/heading";
+import HorizontalLine from "../layout/horizontalLine";
+import PropTypes from "prop-types";
+import Text from "../typography/text";
+
+const propTypes = {
+    isExperience: PropTypes.bool,
+    isSkills: PropTypes.bool,
+    isEducation: PropTypes.bool,
+    isDoubleDegree: PropTypes.bool,
+    hasMinor: PropTypes.bool,
+
+    //for all
+    duration: PropTypes.string,
+    institution: PropTypes.string,
+    location: PropTypes.string,
+
+    //If isEducation
+    degreeOne: PropTypes.string,
+    degreeTwo: PropTypes.string,
+    minor: PropTypes.string,
+    description: PropTypes.string,
+    coreCourses: PropTypes.string,
+
+    //If isExperience
+    positionTitle: PropTypes.string,
+    achievements: PropTypes.array,
+    logo: PropTypes.string,
+
+    //If isSkills
+    subSectionTitle: PropTypes.string,
+    list: PropTypes.array,
+  },
+  defaultProps = {
+    isExperience: false,
+    isSkills: false,
+    isEducation: false,
+    isDoubleDegree: false,
+    hasMinor: false,
+  };
+
+const Card = ({
+  isExperience,
+  isSkills,
+  isEducation,
+  isDoubleDegree,
+  hasMinor,
+  degreeOne,
+  degreeTwo,
+  minor,
+  description,
+  coreCourses,
+  duration,
+  location,
+  institution,
+  children,
+}) => {
+  if (isEducation) {
+    return (
+      <div className={styles.cardComponent}>
+        <Heading type="h5" isBlue>
+          <b>{duration}</b>
+        </Heading>
+        <Heading type="h5">
+          <b>{institution}</b>
+        </Heading>
+        <br />
+        <Heading type="h6">{degreeOne}</Heading>
+        {isDoubleDegree && <Heading type="h6">{degreeTwo}</Heading>}
+        {hasMinor && <Heading type="h6">• Minors: {minor}</Heading>}
+        <br />
+        <Heading type="h6">{location}</Heading>
+        <br />
+        <HorizontalLine fullWidth />
+        <br />
+        <Text isBold={false}>{description}</Text>
+        <br />
+        <Text>
+          <b>Core courses: </b> {coreCourses}
+        </Text>
+      </div>
+    );
+  }
+};
+
+Card.propTypes = propTypes;
+Card.defaultProps = defaultProps;
+
+export default Card;
