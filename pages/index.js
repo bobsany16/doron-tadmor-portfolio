@@ -10,7 +10,7 @@ import ButtonPrimary from "../components/buttons/primary";
 import Layout from "../components/layout";
 import MainAvatar from "../components/avatar/avatar";
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <GlobalWrapper firstChild noPadding>
@@ -51,3 +51,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+export default Home;

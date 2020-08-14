@@ -11,3 +11,14 @@
     border-radius: 50%;
 
 }
+
+.logoWrapper {
+    /* background-color: orange; */
+    text-align: right;
+}
+
+.logo {
+    max-width: 75%;
+    height: auto;
+    align-content: center;
+}

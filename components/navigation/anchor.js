@@ -7,18 +7,20 @@ const propTypes = {
     href: PropTypes.string,
     title: PropTypes.string,
     headingType: PropTypes.string,
+    onClick: PropTypes.func,
   },
   defaultProps = {
     href: "/",
     title: "",
     headingType: "h5",
+    onClick: () => {},
   };
 
-const Anchor = ({ href, title, headingType }) => {
+const Anchor = ({ href, title, headingType, onClick }) => {
   return (
     <Heading type={headingType}>
-      <Link href={href}>
-        <a className={styles.nav_menu_item}>
+      <Link href={href} >
+        <a className={styles.nav_menu_item} onClick={onClick}>
           <b>{title}</b>
         </a>
       </Link>
