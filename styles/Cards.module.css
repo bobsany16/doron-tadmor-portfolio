@@ -10,3 +10,24 @@
    background-color: white;   
    border-radius: 20px;
 }
+
+.cardHeaderGlobalWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.cardHeaderTitleWrapper {
+    min-width: 60%;
+    /* background-color: orange; */
+    overflow: hidden;
+
+}
+
+.cardHeaderLogoWrapper {
+    min-width: 40%;
+    /* background-color: red; */
+    align-self: center;
+
+}

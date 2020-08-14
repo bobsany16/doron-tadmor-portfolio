@@ -3,6 +3,7 @@ import Heading from "../typography/heading";
 import HorizontalLine from "../layout/horizontalLine";
 import PropTypes from "prop-types";
 import Text from "../typography/text";
+import CardHeader from "./cardHeader";
 
 const propTypes = {
     isExperience: PropTypes.bool,
@@ -54,26 +55,23 @@ const Card = ({
   duration,
   location,
   institution,
+  positionTitle,
+  logo,
   children,
 }) => {
   if (isEducation) {
     return (
       <div className={styles.cardComponent}>
-        <Heading type="h5" isBlue>
-          <b>{duration}</b>
-        </Heading>
-        <Heading type="h5">
-          <b>{institution}</b>
-        </Heading>
-        <br />
-        <Heading type="h6">{degreeOne}</Heading>
-        {isDoubleDegree && <Heading type="h6">{degreeTwo}</Heading>}
-        {hasMinor && <Heading type="h6">• Minors: {minor}</Heading>}
-        <br />
-        <Heading type="h6">{location}</Heading>
-        <br />
+        <CardHeader title={duration} subTitle={institution}>
+          <Heading type="h6">{degreeOne}</Heading>
+          {isDoubleDegree && <Heading type="h6">{degreeTwo}</Heading>}
+          {hasMinor && <Heading type="h6">• Minors: {minor}</Heading>}
+          <br />
+          <Heading type="h6">{location}</Heading>
+        </CardHeader>
+
         <HorizontalLine fullWidth />
-        <br />
+
         <Text isBold={false}>{description}</Text>
         <br />
         <Text>
@@ -81,6 +79,24 @@ const Card = ({
         </Text>
       </div>
     );
+  } else if (isExperience) {
+    return (
+      <div className={styles.cardComponent}>
+        <CardHeader
+          hasLogo
+          title={duration}
+          subTitle={positionTitle}
+          logo={logo}
+        >
+          <Heading type="h6">{institution}</Heading>
+          <Heading type="h6">{location}</Heading>
+        </CardHeader>
+
+        <HorizontalLine fullWidth />
+      </div>
+    );
+  } else {
+    return <div>Hi</div>;
   }
 };
 
