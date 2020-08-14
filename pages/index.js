@@ -8,7 +8,7 @@ import HorizontalLine from "../components/layout/horizontalLine";
 import NavBar from "../components/navigation/navBar";
 import ButtonPrimary from "../components/buttons/primary";
 import Layout from "../components/layout";
-import MainAvatar from "../components/avatar/avatar";
+import MainAvatar from "../components/photos/avatar";
 
 const Home = () => {
   return (
