@@ -57,8 +57,24 @@ const Card = ({
   institution,
   positionTitle,
   logo,
+  achievements,
   children,
 }) => {
+  /**
+   * Renders list of achievements within an experience item on resume
+   * @param {array} achievementsArray
+   */
+  const _renderAchievementsList = (achievementsArray) => {
+    if (null) return null;
+    return achievementsArray.map((item) => {
+      return (
+        <div className={styles.achievementTextWrapper}>
+          <Text isBig>{`• ${item}`}</Text>
+        </div>
+      );
+    });
+  };
+
   if (isEducation) {
     return (
       <div className={styles.cardComponent}>
@@ -72,9 +88,9 @@ const Card = ({
 
         <HorizontalLine fullWidth />
 
-        <Text isBold={false}>{description}</Text>
+        <Text isBig>{description}</Text>
         <br />
-        <Text>
+        <Text isBold={false}>
           <b>Core courses: </b> {coreCourses}
         </Text>
       </div>
@@ -93,6 +109,8 @@ const Card = ({
         </CardHeader>
 
         <HorizontalLine fullWidth />
+
+        {_renderAchievementsList(achievements)}
       </div>
     );
   } else {

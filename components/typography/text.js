@@ -3,15 +3,18 @@ import PropTypes from "prop-types";
 
 const propTypes = {
     isBold: PropTypes.bool,
+    isBig: PropTypes.bool,
 }, defaultProps ={
     isBold: true,
+    isBig: false,
 }
 
-const Text = ({children, isBold}) => {
+const Text = ({children, isBold, isBig, ...props}) => {
     return (
         <span>
-            {(isBold && <p className={styles.text}>{children}</p>)}
-            {!isBold && <p className={styles.text_no_bold}>{children}</p>}
+            {(isBold && !isBig && <p className={styles.text_bold_small} {...props}>{children}</p>)}
+            {(isBold && isBig && <p className={styles.text_bold_big} {...props}>{children}</p>)}
+            {!isBold && <p className={styles.text_no_bold} {...props}>{children}</p>}
         </span>
     )
 }

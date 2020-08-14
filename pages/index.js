@@ -40,7 +40,7 @@ const Home = () => {
         <br />
         <br />
         <div className={styles.buttonSection}>
-          <ButtonPrimary color="blue">
+          <ButtonPrimary color="blue" url="resume">
             <b>VIEW MY RESUMÉ</b>
           </ButtonPrimary>
           <ButtonPrimary color="black">

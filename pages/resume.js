@@ -7,8 +7,25 @@ import Layout from "../components/layout";
 import TopBlock from "../components/blocks/topBlock";
 import ThreeBlock from "../components/blocks/threeBlock";
 import Card from "../components/cards/cardBackground";
+import { experienceData } from "../components/data/resumeData";
 
 const Resume = () => {
+  const _renderExperienceCards = ( experienceArray ) => {
+    return experienceArray.map((item) => {
+      return (
+        <Card
+          isExperience
+          duration={item.duration}
+          institution={item.institution}
+          positionTitle={item.positionTitle}
+          location={item.location}
+          achievements={item.achievements}
+          logo={item.logo}
+        />
+      );
+    });
+  };
+
   return (
     <Layout>
       <GlobalWrapper firstChild noPadding>
@@ -60,46 +77,13 @@ const Resume = () => {
         </Heading>
       </GlobalWrapper>
 
-      <Card
-        isExperience
-        duration="June - August 2018"
-        institution="PricewaterhouseCoopers"
-        positionTitle="SUSTAINABILITY CONSULTANT"
-        location="Tokyo, Japan"
-        logo="/PwC.png"
-      />
-       <Card
-        isExperience
-        duration="June - August 2019"
-        institution="KPMG"
-        positionTitle="DEAL ADVISORY INTERN"
-        location="Tel Aviv, Israel"
-        logo="/KPMG.png"
-      />
-       <Card
-        isExperience
-        duration="June - August 2017"
-        institution="US Dept. of the Treasury"
-        positionTitle="ANALYST INTERN"
-        location="Washington, D.C."
-        logo="/USDT.png"
-      />
-       <Card
-        isExperience
-        duration="May - June 2017"
-        institution="BDO"
-        positionTitle="RESEARCH INTERN"
-        location="Columbia, MD"
-        logo="/BDO.png"
-      />
-       <Card
-        isExperience
-        duration="June - August 2016"
-        institution="NASA"
-        positionTitle="ACCOUNTANT INTERN"
-        location="Greenbelt, MD"
-        logo="/NASA.png"
-      />
+      {_renderExperienceCards(experienceData)}
+      <GlobalWrapper firstChild noPadding>
+        <Heading type="h5">
+          <b>SKILLS</b>
+        </Heading>
+      </GlobalWrapper>
+
     </Layout>
   );
 };
