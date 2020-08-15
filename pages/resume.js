@@ -7,7 +7,8 @@ import Layout from "../components/layout";
 import TopBlock from "../components/blocks/topBlock";
 import ThreeBlock from "../components/blocks/threeBlock";
 import Card from "../components/cards/cardBackground";
-import { experienceData } from "../components/data/resumeData";
+import { experienceData, skillsData, languageData, awardsData, interestData } from "../components/data/resumeData";
+import CardList from "../components/cards/cardList";
 
 const Resume = () => {
   const _renderExperienceCards = ( experienceArray ) => {
@@ -83,6 +84,12 @@ const Resume = () => {
           <b>SKILLS</b>
         </Heading>
       </GlobalWrapper>
+
+      <CardList data={skillsData} title="PROFESSIONAL SKILLSET" />
+      <CardList data={languageData} title="LAGUAGES" />
+      <CardList data={awardsData} title="AWARDS" />
+      <CardList data={interestData} title="INTERESTS" />
+
 
     </Layout>
   );

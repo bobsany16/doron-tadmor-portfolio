@@ -81,4 +81,38 @@ let experienceData = [
   },
 ];
 
-export { experienceData, educationData };
+let skillsData = [
+  "Data Analytics (R, SQL, Excel)",
+  "Data Visualization (Tableau, ArcGIS)",
+  "Adobe Creative Cloud",
+  "Time Management"
+]
+
+let languageData = [
+  "English (native)",
+  "Hebrew (fluent)",
+  "Spanish (fluent)",
+  "Arabic (conversational)",
+  "Japanese (conversational)",
+  "Russian (conversational)",
+]
+
+let awardsData = [
+  "Elkins Citizenship Award",
+  "Maryland Medallion Society",
+  "Merrill Presidential Scholar",
+  "Top 3 Sophomores of 2018",
+  "Top 10 Freshman of 2017",
+  "American Legion Award",
+]
+
+let interestData = [
+  "American Cancer Society",
+  "Cultural Immersion",
+  "Learning Languages",
+  "Salsa Dancing",
+  "Personal Investing",
+  "Oil Painting",
+]
+
+export { experienceData, educationData, skillsData, languageData, awardsData, interestData };

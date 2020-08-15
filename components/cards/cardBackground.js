@@ -4,6 +4,7 @@ import HorizontalLine from "../layout/horizontalLine";
 import PropTypes from "prop-types";
 import Text from "../typography/text";
 import CardHeader from "./cardHeader";
+import FlatList from "../list/flatList";
 
 const propTypes = {
     isExperience: PropTypes.bool,
@@ -60,21 +61,6 @@ const Card = ({
   achievements,
   children,
 }) => {
-  /**
-   * Renders list of achievements within an experience item on resume
-   * @param {array} achievementsArray
-   */
-  const _renderAchievementsList = (achievementsArray) => {
-    if (null) return null;
-    return achievementsArray.map((item) => {
-      return (
-        <div className={styles.achievementTextWrapper}>
-          <Text isBig>{`• ${item}`}</Text>
-        </div>
-      );
-    });
-  };
-
   if (isEducation) {
     return (
       <div className={styles.cardComponent}>
@@ -110,7 +96,7 @@ const Card = ({
 
         <HorizontalLine fullWidth />
 
-        {_renderAchievementsList(achievements)}
+        <FlatList data={achievements} isBig />
       </div>
     );
   } else {

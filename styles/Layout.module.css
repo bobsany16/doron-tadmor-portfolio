@@ -26,7 +26,10 @@
     /* background-color: blue; */
 }
 .globalWrapper_first_child_no_padding {
-    padding: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     margin-right: 0;
     margin-left: 0;
     /* margin-bottom: 16px; */
