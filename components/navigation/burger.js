@@ -1,22 +1,78 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import Anchor from "../navigation/anchor";
+import  burgerData  from "./navigationData";
 
-const Burger = ({ children, props }) => {
+class Burger extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false,
+    };
+  }
 
-const [open, setOpen] = useState(false);
+  handleStateChange(state) {
+    this.setState({ menuOpen: state.isOpen });
+  }
 
-const handleChange = () => {
-    setOpen = false;
+  closeMenu() {
+    this.setState({ menuOpen: false });
+  }
+
+  toggleMenu() {
+    this.setState((state) => ({ menuOpen: !state.isOpen }));
+  }
+
+  handleChange() {
+    this.closeMenu();
+  }
+
+  _renderAnchors = (array) => {
+    return array.map((item, index) => {
+      return (
+        <Anchor
+          href={`/${item.link}`}
+          title={item.section}
+          headingType="h3"
+          onClick={this.handleChange}
+          key={index}
+        />
+      );
+    });
+  };
+
+  render() {
+    return (
+      <Menu isOpen={this.state.menuOpen} right noOverlay>
+
+        {this._renderAnchors(burgerData)}
+        {/* <Anchor
+          href="/resume"
+          title="RESUMÉ"
+          headingType="h3"
+          onClick={this.handleChange}
+        />
+        <Anchor
+          href="/"
+          title="PROJECTS"
+          headingType="h3"
+          onClick={this.handleChange}
+        />
+        <Anchor
+          href="/"
+          title="GLOBAL SCALE"
+          headingType="h3"
+          onClick={this.handleChange}
+        />
+        <Anchor
+          href="/"
+          title="CONTACT"
+          headingType="h3"
+          onClick={this.handleChange}
+        /> */}
+      </Menu>
+    );
+  }
 }
-  return (
-    <Menu isOpen={open} right noOverlay {...props}>
-      <Anchor href="/resume" title="RESUMÉ" headingType="h3" onClick={handleChange}/>
-      <Anchor href="/" title="PROJECTS" headingType="h3" onClick={handleChange}/>
-      <Anchor href="/" title="GLOBAL SCALE" headingType="h3" onClick={handleChange}/>
-      <Anchor href="/" title="CONTACT" headingType="h3" onClick={handleChange}/>
-    </Menu>
-  );
-};
 
 export default Burger;

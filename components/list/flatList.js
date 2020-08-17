@@ -16,17 +16,17 @@ const propTypes = {
   };
 
 const _renderItems = (listItems, isBig, hasSeparator) => {
-  return listItems.map((item) => {
+  return listItems.map((item, index) => {
     if (hasSeparator)
       return (
-        <li className={styles.listItem_hasSeparator}>
-          <Text isBig={isBig}>{item}</Text>
+        <li className={styles.listItem_hasSeparator} key={index}>
+          <Text isBig={isBig} >{item}</Text>
         </li>
       );
 
     return (
-      <li className={styles.listItem_noSeparator}>
-        <Text isBig={isBig}>{item}</Text>
+      <li className={styles.listItem_noSeparator} key={index}>
+        <Text isBig={isBig} >{item}</Text>
       </li>
     );
   });

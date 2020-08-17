@@ -16,7 +16,7 @@ const propTypes = {
     twoItem: false,
     titleRight: "",
     titleLeft: "",
-    url: "",
+    url: "/",
   };
 
 const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
@@ -32,8 +32,8 @@ const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
 
       {twoItem && (
         <ButtonPrimary color="blue">
-          <Link href={url} passHref={true}>
-            <a >{titleRight}</a>
+          <Link href={url} >
+            <a>{titleRight}</a>
           </Link>
         </ButtonPrimary>
       )}
