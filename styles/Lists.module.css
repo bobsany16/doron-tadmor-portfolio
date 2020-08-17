@@ -1,9 +1,17 @@
-.listItem {
-    margin-top: 12px;
-    margin-bottom: 12px;
+.listItem_hasSeparator {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  margin-right: 16px;
+}
+.listItem_noSeparator {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .listWrapper {
-    margin: 0;
-    padding-left: 16px;
+  margin: 0;
+  padding-left: 16px;
 }

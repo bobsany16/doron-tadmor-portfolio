@@ -7,11 +7,17 @@ import Layout from "../components/layout";
 import TopBlock from "../components/blocks/topBlock";
 import ThreeBlock from "../components/blocks/threeBlock";
 import Card from "../components/cards/cardBackground";
-import { experienceData, skillsData, languageData, awardsData, interestData } from "../components/data/resumeData";
+import {
+  experienceData,
+  skillsData,
+  languageData,
+  awardsData,
+  interestData,
+} from "../components/data/resumeData";
 import CardList from "../components/cards/cardList";
 
 const Resume = () => {
-  const _renderExperienceCards = ( experienceArray ) => {
+  const _renderExperienceCards = (experienceArray) => {
     return experienceArray.map((item) => {
       return (
         <Card
@@ -30,7 +36,12 @@ const Resume = () => {
   return (
     <Layout>
       <GlobalWrapper firstChild noPadding>
-        <TopBlock twoItem titleLeft="Resumé" titleRight="Download CV" />
+        <TopBlock
+          twoItem
+          titleLeft="Resumé"
+          titleRight="Download CV"
+          // url="https://drive.google.com/file/d/1PLrGAn92-LbCEB3EbB_ZiNlVomI_LJLs/view"
+        />
         {/* <ThreeBlock
           titleLeft="Education"
           titleMiddle="Experience"
@@ -85,12 +96,10 @@ const Resume = () => {
         </Heading>
       </GlobalWrapper>
 
-      <CardList data={skillsData} title="PROFESSIONAL SKILLSET" />
-      <CardList data={languageData} title="LAGUAGES" />
-      <CardList data={awardsData} title="AWARDS" />
-      <CardList data={interestData} title="INTERESTS" />
-
-
+      <CardList hasSeparator data={skillsData} title="PROFESSIONAL SKILLSET" />
+      <CardList hasSeparator data={languageData} title="LANGUAGES" />
+      <CardList hasSeparator data={awardsData} title="AWARDS" />
+      <CardList hasSeparator data={interestData} title="INTERESTS" />
     </Layout>
   );
 };

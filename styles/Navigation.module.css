@@ -8,7 +8,7 @@
   }
 
 .navTitleWrapper {
-    padding: 24px;
+    padding: 16px;
     align-self: center;
     width: 50%;
  
@@ -23,7 +23,7 @@
 }
 
 .menu, .creatorWrapper{
-    padding: 24px;
+    padding: 16px;
     width: 50%;
     text-align: right;
     align-self: center;

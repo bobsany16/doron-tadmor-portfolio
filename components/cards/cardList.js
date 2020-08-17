@@ -10,13 +10,15 @@ import FlatList from "../list/flatList";
 const propTypes = {
     data: PropTypes.array,
     title: PropTypes.string,
+    hasSeparator: PropTypes.bool,
   },
   defaultProps = {
     data: [],
     title: "",
+    hasSeparator: false,
   };
 
-const CardList = ({ data, title, children }) => {
+const CardList = ({ data, title, children, hasSeparator }) => {
   return (
     <div className={styles.cardComponent}>
       <Heading type="h5" isBlue>
@@ -26,7 +28,7 @@ const CardList = ({ data, title, children }) => {
       {/* <HorizontalLine fullWidth/> */}
       <br />
 
-      <FlatList isBig data={data} />
+      <FlatList isBig hasSeparator={hasSeparator} data={data} />
     </div>
   );
 };

@@ -9,15 +9,17 @@ const propTypes = {
     // oneItem: PropTypes.bool,
     titleLeft: PropTypes.string,
     titleRight: PropTypes.string,
+    url: PropTypes.string,
   },
   defaultProps = {
     // oneItem: false,
     twoItem: false,
     titleRight: "",
     titleLeft: "",
+    url: "",
   };
 
-const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, props }) => {
+const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
   //   if (!oneItem && !twoItem) {
   //     oneItem = true;
   //   }
@@ -28,7 +30,13 @@ const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, props }) => {
         <b>{titleLeft}</b>
       </Heading>
 
-      {twoItem && <ButtonPrimary color="blue">{titleRight}</ButtonPrimary>}
+      {twoItem && (
+        <ButtonPrimary color="blue">
+          <Link href={url} passHref={true}>
+            <a >{titleRight}</a>
+          </Link>
+        </ButtonPrimary>
+      )}
     </div>
   );
 };
