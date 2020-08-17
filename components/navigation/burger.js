@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import Anchor from "../navigation/anchor";
-import  burgerData  from "./navigationData";
+import burgerData from "../data/navigationData";
 
 class Burger extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Burger extends React.Component {
           href={`/${item.link}`}
           title={item.section}
           headingType="h3"
-          onClick={this.handleChange}
+          onClick={() => this.toggleMenu}
           key={index}
         />
       );
@@ -44,32 +44,7 @@ class Burger extends React.Component {
   render() {
     return (
       <Menu isOpen={this.state.menuOpen} right noOverlay>
-
         {this._renderAnchors(burgerData)}
-        {/* <Anchor
-          href="/resume"
-          title="RESUMÉ"
-          headingType="h3"
-          onClick={this.handleChange}
-        />
-        <Anchor
-          href="/"
-          title="PROJECTS"
-          headingType="h3"
-          onClick={this.handleChange}
-        />
-        <Anchor
-          href="/"
-          title="GLOBAL SCALE"
-          headingType="h3"
-          onClick={this.handleChange}
-        />
-        <Anchor
-          href="/"
-          title="CONTACT"
-          headingType="h3"
-          onClick={this.handleChange}
-        /> */}
       </Menu>
     );
   }

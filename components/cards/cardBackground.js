@@ -8,7 +8,7 @@ import FlatList from "../list/flatList";
 
 const propTypes = {
     isExperience: PropTypes.bool,
-    isSkills: PropTypes.bool,
+    isProject: PropTypes.bool,
     isEducation: PropTypes.bool,
     isDoubleDegree: PropTypes.bool,
     hasMinor: PropTypes.bool,
@@ -30,13 +30,13 @@ const propTypes = {
     achievements: PropTypes.array,
     logo: PropTypes.string,
 
-    //If isSkills
+    //If isProject
     subSectionTitle: PropTypes.string,
     list: PropTypes.array,
   },
   defaultProps = {
     isExperience: false,
-    isSkills: false,
+    isProject: false,
     isEducation: false,
     isDoubleDegree: false,
     hasMinor: false,
@@ -44,7 +44,7 @@ const propTypes = {
 
 const Card = ({
   isExperience,
-  isSkills,
+  isProject,
   isEducation,
   isDoubleDegree,
   hasMinor,
@@ -100,7 +100,14 @@ const Card = ({
       </div>
     );
   } else {
-    return <div>Hi</div>;
+    return (
+      <div className={styles.cardComponent}>
+        <CardHeader title={institution} subTitle={positionTitle} />
+        <HorizontalLine fullWidth />
+        <Text isBig>{description}</Text>
+      
+      </div>
+    )
   }
 };
 
