@@ -42,7 +42,7 @@ const Resume = () => {
           titleLeft="Resumé"
           titleRight="Download CV"
           // url="https://drive.google.com/file/d/1PLrGAn92-LbCEB3EbB_ZiNlVomI_LJLs/view"
-          url="/"
+          url=""
         />
         {/* <ThreeBlock
           titleLeft="Education"

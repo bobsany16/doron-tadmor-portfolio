@@ -31,10 +31,8 @@ const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
       </Heading>
 
       {twoItem && (
-        <ButtonPrimary color="blue">
-          <Link href={url} >
-            <a>{titleRight}</a>
-          </Link>
+        <ButtonPrimary color="blue" url={url}>
+          {titleRight}
         </ButtonPrimary>
       )}
     </div>
