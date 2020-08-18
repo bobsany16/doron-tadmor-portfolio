@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 // import Icon from "../components/icons/icon";
 import TopBlock from "../components/blocks/topBlock";
 import ThreeBlock from "../components/blocks/threeBlock";
-import Card from "../components/cards/cardBackground";
+import Card from "../components/cards/cardMain";
 import {
   experienceData,
   skillsData,

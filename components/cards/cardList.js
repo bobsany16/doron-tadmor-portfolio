@@ -3,7 +3,7 @@ import CardHeader from "./cardHeader";
 import HorizontalLine from "../layout/horizontalLine";
 import GlobalWrapper from "../layout/globalWrapper";
 import PropTypes from "prop-types";
-import Card from "./cardBackground";
+import Card from "./cardMain";
 import Heading from "../typography/heading";
 import FlatList from "../list/flatList";
 

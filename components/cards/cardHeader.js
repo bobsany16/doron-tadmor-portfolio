@@ -2,7 +2,7 @@ import styles from "/Users/linhanhnguyen/Documents/GitHub/freelance/doron-tadmor
 import PropTypes from "prop-types";
 import Heading from "../typography/heading";
 import HorizontalLine from "../layout/horizontalLine";
-import Card from "./cardBackground";
+import Card from "./cardMain";
 import Logo from "../photos/logo";
 
 const propTypes = {
