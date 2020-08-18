@@ -7,20 +7,40 @@ import Link from "next/link";
 const propTypes = {
     color: PropTypes.oneOf(["blue", "black"]),
     url: PropTypes.string,
-}, defaultProps = {
+    hasExternalLink: PropTypes.bool,
+  },
+  defaultProps = {
     color: "black",
     url: "",
-}
+    hasExternalLink: false,
+  };
 
-const ButtonPrimary = ({ color, children, url }) => {
+const _renderButtonHeader = (hasExternalLink, url, children) => {
+  return (
+    <Heading type="h5">
+      {!hasExternalLink && (
+        <Link href={`/${url}`}>
+          <a>{children}</a>
+        </Link>
+      )}
+      {hasExternalLink && <a href={url} target="_blank">{children}</a>}
+    </Heading>
+  );
+};
+
+const ButtonPrimary = ({ color, children, url, hasExternalLink }) => {
   return (
     <div className={styles.buttonWrapper}>
-      {(color === "blue") && <button className={styles.buttonComponent_blue}>
-        <Heading type="h5"><Link href={`/${url}`}><a>{children}</a></Link></Heading>
-      </button>}
-      {(color === "black") && <button className={styles.buttonComponent_black}>
-        <Heading type="h5">{children}</Heading>
-      </button>}
+      {color === "blue" && (
+        <button className={styles.buttonComponent_blue}>
+          {_renderButtonHeader(hasExternalLink, url, children)}
+        </button>
+      )}
+      {color === "black" && (
+        <button className={styles.buttonComponent_black}>
+          {_renderButtonHeader(hasExternalLink, url, children)}
+        </button>
+      )}
     </div>
   );
 };

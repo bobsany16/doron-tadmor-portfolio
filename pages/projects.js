@@ -25,6 +25,8 @@ const Projects = () => {
   return (
     <Layout>
       <GlobalWrapper firstChild noPadding>
+        <TopBlock oneItem titleLeft="Projects" />
+        <br/>
         <Heading type="h5">
           <b>Impact</b>
         </Heading>

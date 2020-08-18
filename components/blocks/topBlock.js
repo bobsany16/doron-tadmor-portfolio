@@ -6,20 +6,24 @@ import ButtonPrimary from "../buttons/primary";
 
 const propTypes = {
     twoItem: PropTypes.bool,
+    hasExternalLink: PropTypes.bool,
     // oneItem: PropTypes.bool,
     titleLeft: PropTypes.string,
     titleRight: PropTypes.string,
     url: PropTypes.string,
+    
   },
   defaultProps = {
     // oneItem: false,
+    hasExternalLink: false,
     twoItem: false,
     titleRight: "",
     titleLeft: "",
     url: "/",
+    
   };
 
-const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
+const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props, hasExternalLink }) => {
   //   if (!oneItem && !twoItem) {
   //     oneItem = true;
   //   }
@@ -31,7 +35,7 @@ const TopBlock = ({ twoItem, oneItem, titleRight, titleLeft, url, props }) => {
       </Heading>
 
       {twoItem && (
-        <ButtonPrimary color="blue" url={url}>
+        <ButtonPrimary hasExternalLink color="blue"  url={url}>
           {titleRight}
         </ButtonPrimary>
       )}

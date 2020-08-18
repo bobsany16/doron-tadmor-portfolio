@@ -13,7 +13,7 @@ const Footer = ({ children, props }) => {
       <div className={styles.creatorWrapper}>
         <Text>
           Created by{" "}
-          <a href="https://linhnguyen.dev">
+          <a href="https://linhnguyen.dev" target="_blank">
             <u>Linh Nguyen</u>
           </a>
         </Text>

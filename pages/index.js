@@ -43,7 +43,7 @@ const Home = () => {
           <ButtonPrimary color="blue" url="resume">
             <b>VIEW MY RESUMÉ</b>
           </ButtonPrimary>
-          <ButtonPrimary color="black">
+          <ButtonPrimary color="black" url="projects">
             <b>VIEW MY PROJECTS</b>
           </ButtonPrimary>
         </div>
