@@ -7,8 +7,8 @@ import ThreeBlock from "../components/blocks/threeBlock";
 import Card from "../components/cards/cardMain";
 import projectsData from "../components/data/projectData";
 
-const _renderProjectCards = (projectList) => {
-  return projectList.map((item, index) => {
+const _renderProjects = (projectsArray) => {
+  return projectsArray.map((item, index) => {
     return (
       <Card
         isProject
@@ -21,15 +21,26 @@ const _renderProjectCards = (projectList) => {
   });
 };
 
+const _renderProjectCards = (projectCards) => {
+  return projectCards.map((item, index) => {
+    return (
+      <div key={index}>
+        <GlobalWrapper firstChild noPadding>
+          <Heading type="h5">
+            <b>{item.section}</b>
+          </Heading>
+        </GlobalWrapper>
+        {_renderProjects(item.data)}
+      </div>
+    );
+  });
+};
+
 const Projects = () => {
   return (
     <Layout>
       <GlobalWrapper firstChild noPadding>
         <TopBlock oneItem titleLeft="Projects" />
-        <br/>
-        <Heading type="h5">
-          <b>Impact</b>
-        </Heading>
       </GlobalWrapper>
       {_renderProjectCards(projectsData)}
     </Layout>
