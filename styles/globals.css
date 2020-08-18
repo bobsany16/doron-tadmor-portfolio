@@ -41,12 +41,12 @@ a {
   height: 20px;
   right: 36px;
   top: 36px;
-  color: black !important;
+  color: white !important;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: black;
+  background: white;
   
 }
 
