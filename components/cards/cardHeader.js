@@ -34,23 +34,28 @@ const CardHeader = ({
           <Heading type="h5" isBlue>
             <b>{title}</b>
           </Heading>
-          <Heading type="h5">
-            <b>{subTitle}</b>
-          </Heading>
-          <br />
+          <div className={styles.cardHeaderSubTitleWrapper}>
+            <Heading type="h5">
+              <b>{subTitle}</b>
+            </Heading>
+          </div>
+
           {children}
         </div>
         <div className={styles.cardHeaderLogoWrapper}>
-            <Logo uri={logo} />
+          <Logo uri={logo} />
         </div>
       </div>
     );
 
   return (
     <div>
-      <Heading type="h5" isBlue>
-        <b>{title}</b>
-      </Heading>
+      <div className={styles.cardHeaderOtherTitleWrapper}>
+        <Heading type="h5" isBlue>
+          <b>{title}</b>
+        </Heading>
+      </div>
+
       <Heading type="h5">
         <b>{subTitle}</b>
       </Heading>

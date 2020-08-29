@@ -19,15 +19,23 @@ import CardList from "../components/cards/cardList";
 const Resume = () => {
   const _renderExperienceCards = (experienceArray) => {
     return experienceArray.map((item, index) => {
+      const {
+        duration,
+        institution,
+        positionTitle,
+        location,
+        achievements,
+        logo,
+      } = item;
       return (
         <Card
           isExperience
-          duration={item.duration}
-          institution={item.institution}
-          positionTitle={item.positionTitle}
-          location={item.location}
-          achievements={item.achievements}
-          logo={item.logo}
+          duration={duration}
+          institution={institution}
+          positionTitle={positionTitle}
+          location={location}
+          achievements={achievements}
+          logo={logo}
           key={index}
         />
       );
@@ -42,16 +50,8 @@ const Resume = () => {
           titleLeft="Resumé"
           titleRight="Download CV"
           url="https://drive.google.com/file/d/1PLrGAn92-LbCEB3EbB_ZiNlVomI_LJLs/view"
-          // url=""
         />
-        {/* <ThreeBlock
-          titleLeft="Education"
-          titleMiddle="Experience"
-          titleRight="Skills"
-          anchorLinkLeft="education"
-          anchorLinkRight="skills"
-          anchorLinkMiddle="experience"
-        /> */}
+
         <Heading type="h5">
           <b>EDUCATION</b>
         </Heading>
